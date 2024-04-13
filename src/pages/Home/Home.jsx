@@ -1,4 +1,5 @@
 
+import { useLoaderData } from 'react-router-dom';
 import Header from '../Shared/Header/Header';
 import LeftsideNavbar from '../Shared/LeftsideNavbar/LeftsideNavbar';
 import Navber from '../Shared/Navber/Navber';
@@ -8,6 +9,9 @@ import BreakingNews from './BreakingNews/BreakingNews';
 
 
 const Home = () => {
+
+    const news = useLoaderData();
+    console.log(news);
     return (
         <div>
             <div>
@@ -23,7 +27,14 @@ const Home = () => {
                     </div>
 
                     <div className=" md:col-span-2">
-                        <NewsComming></NewsComming>
+                        {
+                            news.slice(0,2) .map(aNews =>
+                                <NewsComming
+                                    key={news.id}
+                                    news={aNews}>
+
+                                </NewsComming>)
+                        }
                     </div>
 
                     <div >
