@@ -19,7 +19,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/the-dragon-news.git
+git clone https://github.com/anisa94/the-dragon-news.git
 Navigate to the project directory:
 
 bash
